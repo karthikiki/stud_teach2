@@ -12,7 +12,7 @@ import Teachers from './Components2/Teachers';
 import AddTeacher from './Components2/AddTeachers';
 import UpdateTeachers from './Components2/UpdateTeacher';
 
-
+//
 function App() {
   const [students,setStudents] = useState([]);
   const [teachers,setTeachers] = useState([]);

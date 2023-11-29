@@ -12,7 +12,7 @@ const StudentDashboard = () => {
         <Button onClick={()=>history.push("/students")}>Student's List</Button>
         <Button onClick={()=>history.push("/add")}>Add - Student</Button>
     </div>
-
+//
    </Base>
   )
 }

@@ -42,6 +42,7 @@ const UpdateStudents = ({students,setStudents}) => {
         history.push("/students")
     }
    }
+   //
   return (
     <Base title={"Edit Student Details"}
    description={"Here we can edit students details in database"}>

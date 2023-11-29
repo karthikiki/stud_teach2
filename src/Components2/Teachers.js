@@ -10,7 +10,7 @@ function Teachers({teachers,setTeachers}){
     const deleteTeachers = async(teachId)=>{
          const response1 = await fetch(`https://64987c339543ce0f49e2143a.mockapi.io/teacher/${teachId}`,{
             method:"DELETE"
-         });
+         })
          const data1 = await response1.json()
          if(data1){
             const remainingTeachers = teachers.filter((teach,idx)=> teach.id !== teachId)

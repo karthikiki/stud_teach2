@@ -10,6 +10,6 @@ export const Dashboard = () => {
     description={"Students and Teachers Managment"}>
     </Base>
 
-   
+   //
   )
 }

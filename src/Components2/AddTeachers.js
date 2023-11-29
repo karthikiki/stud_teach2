@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Base from '../Base/Base'
 import { Button, TextField } from '@mui/material'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
-
+//
 function AddTeacher({teachers,setTeachers}){
     const history = useHistory();
     const [name,setName]= useState("")

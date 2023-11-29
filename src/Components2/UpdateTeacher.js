@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 function UpdateTeachers({teachers,setTeachers}){
-    
+    //
     const{id} = useParams();
     const editTeacher = teachers[id]
     const [name,setName]= useState("")

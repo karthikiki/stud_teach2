@@ -10,7 +10,7 @@ const AddStudent = ({students,setStudents}) => {
   const[batch,setBatch] = useState("")
   const[gender,setGender] = useState("")
   const[Qualification,setQualification] = useState("")
-
+//
   const createStudent = async ()=>{
     const newStudent={
       name : name,
