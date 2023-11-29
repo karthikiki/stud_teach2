@@ -7,37 +7,32 @@ import AddStudents from './Components/AddStudent';
 import { useEffect, useState } from 'react';
 import UpdateStudents from './Components/UpdateStudents';
 import NoPage from './Components/NoPage';
-import TeacherDashboard from './Components2/TeacherDashboard';
-import Teachers from './Components2/Teachers';
-import AddTeacher from './Components2/AddTeachers';
-import UpdateTeachers from './Components2/UpdateTeacher';
 
 
 function App() {
   const [students,setStudents] = useState([]);
-  const [teachers,setTeachers] = useState([]);
   useEffect(()=>{
-    const result = async ()=>{
+    const fetchData = async ()=>{
     try {
-      //student data
-      const response = await fetch('https://649820699543ce0f49e1abe3.mockapi.io/users',{
-      method:"GET"});
+     //https://649820699543ce0f49e1abe3.mockapi.io/users
+      const response = await fetch('https://node1-pratcise.vercel.app/students/all',{
+      method:"GET",
+      headers: {
+        "x-auth-token" : localStorage.getItem("token")
+      }
+    });
+    if(!response.ok){
+      throw new Error('Network response was not ok')
+    }
       const data = await response.json();
-      console.log(data)
-      setStudents([...data])
-
-      //teacher data
-      const response1 = await fetch('https://64987c339543ce0f49e2143a.mockapi.io/teacher',{
-          method: "GET",
-        })
-        const data1 = await response1.json();
-        console.log(data1)
-        setTeachers([...data1])
+      console.log(data.data)
+      // setStudents([...data])0
+      setStudents(data.data)
     } catch (error) {
       console.error('Error fetching data:',error.message)
     }
   }
-  result();
+  fetchData();
 },[])
   return (
     <div className='App'>
@@ -65,26 +60,6 @@ function App() {
         <UpdateStudents
         students={students}
         setStudents={setStudents}/>
-       </Route>
-       <Route path="/teacherDashboard">
-        <TeacherDashboard
-        teachers={teachers}
-        setTeachers={setTeachers}/>
-       </Route>
-       <Route path="/teachers">
-        <Teachers
-        teachers={teachers}
-        setTeachers={setTeachers}/>
-       </Route>
-       <Route path="/addteacher">
-        <AddTeacher
-        teachers={teachers}
-        setTeachers={setTeachers}/>
-       </Route>
-       <Route path="/edit_teacher/:id">
-        <UpdateTeachers
-        teachers={teachers}
-        setTeachers={setTeachers}/>
        </Route>
        <Route path="**">
         <NoPage/>
