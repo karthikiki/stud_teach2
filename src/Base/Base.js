@@ -12,6 +12,7 @@ const Base = ({title,description,children}) => {
             <Button onClick={()=>history.push("/teacherDashboard")}>Teacher Dashboard</Button>
             <Button onClick={()=>history.push("/studentDashboard")}>Student Dashboard</Button>
         </div>
+        
         <header>
             <Typography variant='h4' component="h2">{title}</Typography>
         </header>

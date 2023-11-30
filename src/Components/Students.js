@@ -8,6 +8,7 @@ import EditIcon from '@mui/icons-material/Edit'
 const Students = ({students,setStudents}) => {
   const history = useHistory();
   
+  
   //Delete
  const deleteStudent = async(studId)=>{
   const response = await fetch(`https://649820699543ce0f49e1abe3.mockapi.io/users/${studId}`,{

@@ -7,6 +7,7 @@ const TeacherDashboard = () => {
   const history=useHistory();
   return (
     <Base
+    //
     // title={"welcome"}
     description={"Teacher's DashBoard"}>
      <div className='.nav-bar'>

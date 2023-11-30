@@ -4,7 +4,7 @@ import Base from '../Base/Base';
 import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
-
+// 
 function Teachers({teachers,setTeachers}){
     const history = useHistory();
     const deleteTeachers = async(teachId)=>{

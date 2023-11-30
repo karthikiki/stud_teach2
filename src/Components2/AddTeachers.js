@@ -9,7 +9,7 @@ function AddTeacher({teachers,setTeachers}){
     const [subject,setSubject]= useState("")
     const [contact,setContact] = useState("")
     const [performance,setPerformance] = useState("")
-
+// 
     const createTeachers = async ()=>{
         const newTeachers ={
             name:name,
